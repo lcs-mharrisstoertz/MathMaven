@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct MultiplicationView: View {
+    
+    //MARK: Stored properties
+    //numbers that need to be multiplied
+    @State var firstValue = Int.random(in: 0...12)
+    @State var  secondValue = Int.random(in: 0...12)
+    
+    //holds input
+    @State var input = ""
+    
+    //has the answer been checked?
+    @State var answerChecked = false
+    
+    //was the answer correct
+    @State var answerCorrect = false
+    
+    //MARK: Computed properties
     var body: some View {
-        VStack {
-            Text("Multiplication")
-            Text(Operation.multiplication.rawValue)
+        VStack(spacing: 0) {
+            
         }
-        .font(Font.custom("SF Pro", size: 64))
     }
 }
 
