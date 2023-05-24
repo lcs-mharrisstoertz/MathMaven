@@ -26,6 +26,32 @@ struct MultiplicationView: View {
     //MARK: Computed properties
     var body: some View {
         VStack(spacing: 0) {
+            // 1. present question
+            Group{
+                HStack{
+                    Text(Operation.multiplication.rawValue)
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing){
+                        Text("\(firstValue)")
+                        Text("\(secondValue)")
+                    }
+                }
+                
+                Divider()
+            }
+            .padding(.horizontal)
+            
+            //2. accept answer
+            Group{
+                HStack{
+                    ZStack{
+                        
+                    }
+                }
+            }
+            
             
         }
     }

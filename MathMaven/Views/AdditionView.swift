@@ -55,7 +55,6 @@ struct AdditionView: View {
 
             // 2. Accept answer
             HStack {
-
                 ZStack {
                     
                     // Only show this when the answer was found to be correct
