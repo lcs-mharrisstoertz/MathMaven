@@ -24,6 +24,12 @@ struct MultiplicationView: View {
     @State var answerCorrect = false
     
     //MARK: Computed properties
+    //correct response
+    var correctResponse: Int{
+        return firstValue * secondValue
+    }
+    
+    //user interface
     var body: some View {
         VStack(spacing: 0) {
             // 1. present question
@@ -48,8 +54,43 @@ struct MultiplicationView: View {
                 HStack{
                     ZStack{
                         
+                        //show this if answer is correct
+                        if answerCorrect == true {
+                            Image(systemName: "checkmark.circle")
+                                .foregroundColor(.green)
+                        }
+                        
+                        //show this if answer is wrong
+                        if answerChecked == true && answerCorrect == false {
+                            Image(systemName: "x.square")
+                                .foregroundColor(.red)
+                        }
+                        
+                        Spacer()
+                        
+                        TextField("",
+                                  text: $input)
+                        .multilineTextAlignment(.trailing)
                     }
+                    .padding(.horizontal)
                 }
+            }
+            
+            //3. check answer
+            if answerChecked == false {
+                CheckAnswerButtonView(input: input,
+                                      correctResponse: correctResponse,
+                                      answerChecked: $answerChecked,
+                                      answerCorrect: $answerCorrect)
+            } else {
+                //4. generate new question
+                //only show when answer has been provided
+                Button(action:{
+                    generateNewQuestion()
+                } , label: {
+                    Text("New Question")
+                        .font(.largeTitle)
+                })
             }
             
             
