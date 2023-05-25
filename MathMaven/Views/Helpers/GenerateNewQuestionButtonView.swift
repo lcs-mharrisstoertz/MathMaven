@@ -11,9 +11,9 @@ struct GenerateNewQuestionButtonView: View {
     
     //MARK: Stored properties
     
-    @State var firstValue = Int.random(in: 0...12)
-    @State var secondValue = Int.random(in: 0...12)
-    @State var input: String
+    @Binding var firstValue: Int
+    @Binding var secondValue: Int
+    @Binding var input: String
     @Binding var answerChecked: Bool
     @Binding var answerCorrect: Bool
     
@@ -22,7 +22,7 @@ struct GenerateNewQuestionButtonView: View {
         Button(action: {
             generateNewQuestion()
         }, label: {
-            Text("New question")
+            Text("New Question")
                 .font(.largeTitle)
         })
         .padding()
@@ -50,9 +50,9 @@ struct GenerateNewQuestionButtonView: View {
 
 struct GenerateNewQuestionButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        GenerateNewQuestionButtonView(firstValue: 1,
-                                      secondValue: 10,
-                                      input: "",
+        GenerateNewQuestionButtonView(firstValue: .constant(1),
+                                      secondValue: .constant(1),
+                                      input: .constant(""),
                                       answerChecked: .constant(false),
                                       answerCorrect: .constant(false))
     }
