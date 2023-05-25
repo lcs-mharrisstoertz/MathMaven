@@ -84,14 +84,12 @@ struct MultiplicationView: View {
                                       answerCorrect: $answerCorrect)
             } else {
                 //4. generate new question
-                Button(action: {
-                    generateNewQuestion()
-                }, label: {
-                    Text("New question")
-                        .font(.largeTitle)
-                })
-                .padding()
-                .buttonStyle(.bordered)
+                
+                GenerateNewQuestionButtonView(firstValue: firstValue,
+                                              secondValue: secondValue,
+                                              input: input,
+                                              answerChecked: $answerChecked,
+                                              answerCorrect: $answerCorrect)
                 
             }
             
