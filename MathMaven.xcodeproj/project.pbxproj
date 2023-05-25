@@ -16,6 +16,7 @@
 		8148590F2A1E298300A7315E /* DivisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148590E2A1E298300A7315E /* DivisionView.swift */; };
 		814859122A1E2A5900A7315E /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859112A1E2A5900A7315E /* Operation.swift */; };
 		814859162A1E360D00A7315E /* CheckAnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859152A1E360D00A7315E /* CheckAnswerButtonView.swift */; };
+		CC09AD752A1EE0DC0041DEEA /* AcceptAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC09AD742A1EE0DC0041DEEA /* AcceptAnswerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8148590E2A1E298300A7315E /* DivisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionView.swift; sourceTree = "<group>"; };
 		814859112A1E2A5900A7315E /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		814859152A1E360D00A7315E /* CheckAnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAnswerButtonView.swift; sourceTree = "<group>"; };
+		CC09AD742A1EE0DC0041DEEA /* AcceptAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptAnswerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				814859152A1E360D00A7315E /* CheckAnswerButtonView.swift */,
+				CC09AD742A1EE0DC0041DEEA /* AcceptAnswerView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				814859082A1E293C00A7315E /* AdditionView.swift in Sources */,
 				814858F92A1E28DE00A7315E /* MathMavenApp.swift in Sources */,
 				8148590A2A1E294A00A7315E /* SubtractionView.swift in Sources */,
+				CC09AD752A1EE0DC0041DEEA /* AcceptAnswerView.swift in Sources */,
 				8148590F2A1E298300A7315E /* DivisionView.swift in Sources */,
 				814859122A1E2A5900A7315E /* Operation.swift in Sources */,
 				814859162A1E360D00A7315E /* CheckAnswerButtonView.swift in Sources */,

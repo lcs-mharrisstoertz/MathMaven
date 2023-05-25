@@ -84,17 +84,46 @@ struct MultiplicationView: View {
                                       answerCorrect: $answerCorrect)
             } else {
                 //4. generate new question
-                //only show when answer has been provided
-                Button(action:{
+                Button(action: {
                     generateNewQuestion()
-                } , label: {
-                    Text("New Question")
+                }, label: {
+                    Text("New question")
                         .font(.largeTitle)
                 })
+                .padding()
+                .buttonStyle(.bordered)
+                
             }
             
-            
+            // Push interface up to top of screen
+            Spacer()
+
         }
+        .font(Font.custom("SF Pro", size: 64))
+        // Runs as soon as the view loads
+        .task {
+            // Changes second value from 0 to something less than first value
+            secondValue = Int.random(in: 1...firstValue)
+        }
+    }
+    
+    
+    // MARK: Functions
+    
+    // Generate a new question
+    func generateNewQuestion() {
+        
+        // Generate a new question
+        firstValue = Int.random(in: 0...12)
+        secondValue = Int.random(in: 0...12)
+
+        // Reset properties that track what's happening with the current question
+        answerChecked = false
+        answerCorrect = false
+        
+        // Reset the input field
+        input = ""
+
     }
 }
 
